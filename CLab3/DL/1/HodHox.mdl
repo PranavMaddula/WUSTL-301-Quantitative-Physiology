@@ -1,0 +1,1440 @@
+Model {
+  Name			  "HodHox"
+  Version		  4.00
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Wed Apr  2 05:05:09 2003"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Sun Apr  6 08:03:12 2003"
+  ModelVersionFormat	  "1.%<AutoIncrement:21>"
+  ConfigurationManager	  "none"
+  SimParamPage		  "Solver"
+  StartTime		  "0.0"
+  StopTime		  "15.0"
+  SolverMode		  "Auto"
+  Solver		  "ode45"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  Refine		  "1"
+  MaxStep		  "auto"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  LimitDataPoints	  on
+  MaxDataPoints		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  SingleTaskRateTransMsg  "none"
+  MultiTaskRateTransMsg	  "error"
+  IntegerOverflowMsg	  "warning"
+  CheckForMatrixSingularity "none"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  SignalLabelMismatchMsg  "none"
+  LinearizationMsg	  "none"
+  VectorMatrixConversionMsg "none"
+  SfunCompatibilityCheckMsg "none"
+  BlockPriorityViolationMsg "warning"
+  ArrayBoundsChecking	  "none"
+  ConsistencyChecking	  "none"
+  ZeroCross		  on
+  Profile		  off
+  SimulationMode	  "normal"
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWOptions		  "-aExtMode=0 -aForceParamTrailComments=0 -aInlineInv"
+"ariantSignals=0 -aLocalBlockOutputs=1 -aLogVarNameModifier=\"rt_\" -aRTWVerbo"
+"se=1 -aRollThreshold=5 -aShowEliminatedStatements=1"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeLogAll		  on
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  ParameterPooling	  on
+  BlockReductionOpt	  off
+  BooleanDataType	  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "HodHox"
+    Location		    [149, 175, 1035, 868]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    AutoZoom		    on
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Scope
+      Name		      "Action Potential"
+      Ports		      [1]
+      Position		      [550, 581, 635, 659]
+      ForegroundColor	      "red"
+      BackgroundColor	      "cyan"
+      Floating		      off
+      Location		      [84, 458, 408, 697]
+      Open		      off
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "10"
+      YMin		      "-55"
+      YMax		      "0"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Pulse\nGenerator"
+      Ports		      [0, 1]
+      Position		      [825, 475, 855, 505]
+      Orientation	      "left"
+      ForegroundColor	      "red"
+      BackgroundColor	      "cyan"
+      SourceBlock	      "simulink3/Sources/Pulse\nGenerator"
+      SourceType	      "Pulse Generator"
+      period		      "2"
+      duty		      "50"
+      amplitude		      "15"
+      start		      "5"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum"
+      Ports		      [4, 1]
+      Position		      [535, 227, 615, 528]
+      Orientation	      "left"
+      ForegroundColor	      "red"
+      BackgroundColor	      "cyan"
+      ShowName		      off
+      IconShape		      "rectangular"
+      Inputs		      "---+"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "V_m"
+      Ports		      [1, 1]
+      Position		      [410, 344, 470, 416]
+      Orientation	      "left"
+      ForegroundColor	      "red"
+      BackgroundColor	      "cyan"
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "0"
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "i_K"
+      Ports		      [1, 1]
+      Position		      [160, 325, 270, 435]
+      Orientation	      "left"
+      ForegroundColor	      "red"
+      BackgroundColor	      "cyan"
+      ShowPortLabels	      on
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      System {
+	Name			"i_K"
+	Location		[201, 147, 870, 692]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "V_m"
+	  Position		  [575, 218, 605, 232]
+	  Orientation		  "left"
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "cyan"
+	  Port			  "1"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "E_K"
+	  Position		  [375, 393, 480, 437]
+	  Orientation		  "left"
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "cyan"
+	  Value			  "-82"
+	  VectorParams1D	  on
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [3, 1]
+	  Position		  [130, 62, 190, 398]
+	  Orientation		  "left"
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "cyan"
+	  Inputs		  "3"
+	  Multiplication	  "Element-wise(.*)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  Ports			  [2, 1]
+	  Position		  [250, 308, 325, 372]
+	  Orientation		  "left"
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "cyan"
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "|+-"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "g_K"
+	  Position		  [370, 97, 475, 143]
+	  Orientation		  "left"
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "cyan"
+	  Value			  "36"
+	  VectorParams1D	  on
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "gate_n"
+	  Ports			  [1, 1]
+	  Position		  [375, 194, 485, 256]
+	  Orientation		  "left"
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "cyan"
+	  ShowPortLabels	  on
+	  TreatAsAtomicUnit	  off
+	  RTWSystemCode		  "Auto"
+	  RTWFcnNameOpts	  "Auto"
+	  RTWFileNameOpts	  "Auto"
+	  System {
+	    Name		    "gate_n"
+	    Location		    [298, 48, 917, 533]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    AutoZoom		    on
+	    Block {
+	      BlockType		      Inport
+	      Name		      "V_m"
+	      Position		      [135, 53, 165, 67]
+	      ForegroundColor	      "red"
+	      BackgroundColor	      "cyan"
+	      Port		      "1"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Product"
+	      Ports		      [2, 1]
+	      Position		      [420, 231, 465, 264]
+	      ForegroundColor	      "red"
+	      BackgroundColor	      "cyan"
+	      Inputs		      "/*"
+	      Multiplication	      "Element-wise(.*)"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum"
+	      Ports		      [2, 1]
+	      Position		      [270, 245, 290, 265]
+	      ForegroundColor	      "red"
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	      IconShape		      "round"
+	      Inputs		      "|+-"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Scope
+	      Name		      "Variable n"
+	      Ports		      [1]
+	      Position		      [370, 429, 400, 461]
+	      ForegroundColor	      "red"
+	      BackgroundColor	      "cyan"
+	      Floating		      off
+	      Location		      [399, 615, 723, 854]
+	      Open		      off
+	      NumInputPorts	      "1"
+	      TickLabels	      "OneTimeTick"
+	      ZoomMode		      "on"
+	      List {
+		ListType		AxesTitles
+		axes1			"%<SignalLabel>"
+	      }
+	      Grid		      "on"
+	      TimeRange		      "auto"
+	      YMin		      "-5"
+	      YMax		      "5"
+	      SaveToWorkspace	      off
+	      SaveName		      "ScopeData3"
+	      DataFormat	      "StructureWithTime"
+	      LimitDataPoints	      on
+	      MaxDataPoints	      "5000"
+	      Decimation	      "1"
+	      SampleInput	      off
+	      SampleTime	      "0"
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "infinity_n"
+	      Position		      [225, 155, 285, 195]
+	      Orientation	      "down"
+	      ForegroundColor	      "red"
+	      BackgroundColor	      "cyan"
+	      NamePlacement	      "alternate"
+	      Expr		      "0.01*(u+10.0)/(0.01*(u+10.0)+0.125*exp("
+"u/80)*(exp(0.01*(u+10.0))-1.0))"
+	    }
+	    Block {
+	      BlockType		      Integrator
+	      Name		      "n"
+	      Ports		      [1, 1]
+	      Position		      [320, 380, 350, 410]
+	      Orientation	      "left"
+	      ForegroundColor	      "red"
+	      BackgroundColor	      "cyan"
+	      ExternalReset	      "none"
+	      InitialConditionSource  "internal"
+	      InitialCondition	      "0"
+	      LimitOutput	      off
+	      UpperSaturationLimit    "inf"
+	      LowerSaturationLimit    "-inf"
+	      ShowSaturationPort      off
+	      ShowStatePort	      off
+	      AbsoluteTolerance	      "auto"
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "t"
+	      Position		      [356, 155, 414, 195]
+	      Orientation	      "down"
+	      ForegroundColor	      "red"
+	      BackgroundColor	      "cyan"
+	      NamePlacement	      "alternate"
+	      Expr		      "(exp(0.01*(u+10.0))-1.0)/(0.01*(u+10.0)"
+"+0.125*exp(u/80)*(exp(0.01*(u+10.0))-1.0))"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "gate_n"
+	      Position		      [140, 388, 170, 402]
+	      Orientation	      "left"
+	      ForegroundColor	      "red"
+	      BackgroundColor	      "cyan"
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Line {
+	      SrcBlock		      "V_m"
+	      SrcPort		      1
+	      Points		      [0, 0; 85, 0]
+	      Branch {
+		Points			[130, 0]
+		DstBlock		"t"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"infinity_n"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "t"
+	      SrcPort		      1
+	      Points		      [0, 40]
+	      DstBlock		      "Product"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Sum"
+	      SrcPort		      1
+	      DstBlock		      "Product"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "infinity_n"
+	      SrcPort		      1
+	      DstBlock		      "Sum"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Product"
+	      SrcPort		      1
+	      Points		      [30, 0; 0, 145]
+	      DstBlock		      "n"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "n"
+	      SrcPort		      1
+	      Points		      [0, 0; -35, 0]
+	      Branch {
+		DstBlock		"Sum"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[-45, 0]
+		Branch {
+		  DstBlock		  "gate_n"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [0, 50]
+		  DstBlock		  "Variable n"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Annotation {
+	      Position		      [284, 23]
+	      Text		      "Gating Variable : n"
+	      DropShadow	      on
+	      FontSize		      18
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "power four"
+	  Ports			  [4, 1]
+	  Position		  [245, 197, 325, 258]
+	  Orientation		  "left"
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "cyan"
+	  Inputs		  "4"
+	  Multiplication	  "Element-wise(.*)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "i_K"
+	  Position		  [45, 223, 75, 237]
+	  Orientation		  "left"
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "cyan"
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "E_K"
+	  SrcPort		  1
+	  Points		  [-10, 0; 0, -55]
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "V_m"
+	  SrcPort		  1
+	  Points		  [-30, 0]
+	  Branch {
+	    DstBlock		    "gate_n"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 115]
+	    DstBlock		    "Sum"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "gate_n"
+	  SrcPort		  1
+	  Points		  [-20, 0]
+	  Branch {
+	    Points		    [0, 10]
+	    Branch {
+	      Points		      [0, 15]
+	      DstBlock		      "power four"
+	      DstPort		      4
+	    }
+	    Branch {
+	      DstBlock		      "power four"
+	      DstPort		      3
+	    }
+	  }
+	  Branch {
+	    Points		    [0, -10]
+	    Branch {
+	      Points		      [0, -10]
+	      DstBlock		      "power four"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 5]
+	      DstBlock		      "power four"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "power four"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "g_K"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  DstBlock		  "i_K"
+	  DstPort		  1
+	}
+	Annotation {
+	  Position		  [307, 31]
+	  Text			  "Current by Potassium ion "
+	  DropShadow		  on
+	  FontSize		  18
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "i_L"
+      Ports		      [1, 1]
+      Position		      [160, 470, 270, 580]
+      Orientation	      "left"
+      ForegroundColor	      "red"
+      BackgroundColor	      "cyan"
+      ShowPortLabels	      on
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      System {
+	Name			"i_L"
+	Location		[213, 32, 876, 505]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "V_m"
+	  Position		  [600, 253, 630, 267]
+	  Orientation		  "left"
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "cyan"
+	  Port			  "1"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "E_L"
+	  Position		  [455, 323, 515, 357]
+	  Orientation		  "left"
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "cyan"
+	  Value			  "-59"
+	  VectorParams1D	  on
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1]
+	  Position		  [165, 102, 240, 313]
+	  Orientation		  "left"
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "cyan"
+	  Inputs		  "2"
+	  Multiplication	  "Element-wise(.*)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  Ports			  [2, 1]
+	  Position		  [325, 221, 395, 299]
+	  Orientation		  "left"
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "cyan"
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "|+-"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "g_L"
+	  Position		  [335, 135, 445, 175]
+	  Orientation		  "left"
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "cyan"
+	  Value			  "0.3"
+	  VectorParams1D	  on
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "i_L"
+	  Position		  [55, 203, 85, 217]
+	  Orientation		  "left"
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "cyan"
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "g_L"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "V_m"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "E_L"
+	  SrcPort		  1
+	  Points		  [-20, 0; 0, -55]
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  DstBlock		  "i_L"
+	  DstPort		  1
+	}
+	Annotation {
+	  Position		  [330, 38]
+	  Text			  "Cuurent by Leaky channels"
+	  DropShadow		  on
+	  FontSize		  18
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "i_Na"
+      Ports		      [1, 1]
+      Position		      [160, 196, 270, 294]
+      Orientation	      "left"
+      ForegroundColor	      "red"
+      BackgroundColor	      "cyan"
+      ShowPortLabels	      on
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      System {
+	Name			"i_Na"
+	Location		[142, 124, 825, 594]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "V_m"
+	  Position		  [575, 248, 605, 262]
+	  Orientation		  "left"
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "cyan"
+	  Port			  "1"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "E_Na"
+	  Position		  [445, 379, 530, 411]
+	  Orientation		  "left"
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "cyan"
+	  Value			  "45"
+	  VectorParams1D	  on
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [4, 1]
+	  Position		  [165, 55, 210, 375]
+	  Orientation		  "left"
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "cyan"
+	  Inputs		  "4"
+	  Multiplication	  "Element-wise(.*)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  Ports			  [2, 1]
+	  Position		  [255, 303, 360, 367]
+	  Orientation		  "left"
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "cyan"
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "|+-"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "cube"
+	  Ports			  [3, 1]
+	  Position		  [260, 145, 325, 205]
+	  Orientation		  "left"
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "cyan"
+	  Inputs		  "3"
+	  Multiplication	  "Element-wise(.*)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "g_Na"
+	  Position		  [370, 80, 470, 110]
+	  Orientation		  "left"
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "cyan"
+	  Value			  "120"
+	  VectorParams1D	  on
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "gate_h"
+	  Ports			  [1, 1]
+	  Position		  [370, 225, 475, 285]
+	  Orientation		  "left"
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "cyan"
+	  ShowPortLabels	  on
+	  TreatAsAtomicUnit	  off
+	  RTWSystemCode		  "Auto"
+	  RTWFcnNameOpts	  "Auto"
+	  RTWFileNameOpts	  "Auto"
+	  System {
+	    Name		    "gate_h"
+	    Location		    [127, 13, 688, 487]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    AutoZoom		    on
+	    Block {
+	      BlockType		      Inport
+	      Name		      "V_m"
+	      Position		      [95, 48, 125, 62]
+	      ForegroundColor	      "red"
+	      BackgroundColor	      "cyan"
+	      Port		      "1"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Product"
+	      Ports		      [2, 1]
+	      Position		      [380, 226, 425, 259]
+	      ForegroundColor	      "red"
+	      BackgroundColor	      "cyan"
+	      Inputs		      "/*"
+	      Multiplication	      "Element-wise(.*)"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum"
+	      Ports		      [2, 1]
+	      Position		      [230, 240, 250, 260]
+	      ForegroundColor	      "red"
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	      IconShape		      "round"
+	      Inputs		      "|+-"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Scope
+	      Name		      "Variable h"
+	      Ports		      [1]
+	      Position		      [475, 404, 505, 436]
+	      ForegroundColor	      "red"
+	      BackgroundColor	      "cyan"
+	      Floating		      off
+	      Location		      [47, 712, 371, 854]
+	      Open		      off
+	      NumInputPorts	      "1"
+	      TickLabels	      "OneTimeTick"
+	      ZoomMode		      "on"
+	      List {
+		ListType		AxesTitles
+		axes1			"%<SignalLabel>"
+	      }
+	      Grid		      "on"
+	      TimeRange		      "auto"
+	      YMin		      "-5"
+	      YMax		      "5"
+	      SaveToWorkspace	      off
+	      SaveName		      "ScopeData2"
+	      DataFormat	      "StructureWithTime"
+	      LimitDataPoints	      on
+	      MaxDataPoints	      "5000"
+	      Decimation	      "1"
+	      SampleInput	      off
+	      SampleTime	      "0"
+	    }
+	    Block {
+	      BlockType		      Integrator
+	      Name		      "h"
+	      Ports		      [1, 1]
+	      Position		      [280, 375, 310, 405]
+	      Orientation	      "left"
+	      ForegroundColor	      "red"
+	      BackgroundColor	      "cyan"
+	      ExternalReset	      "none"
+	      InitialConditionSource  "internal"
+	      InitialCondition	      "0"
+	      LimitOutput	      off
+	      UpperSaturationLimit    "inf"
+	      LowerSaturationLimit    "-inf"
+	      ShowSaturationPort      off
+	      ShowStatePort	      off
+	      AbsoluteTolerance	      "auto"
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "infinity_h"
+	      Position		      [185, 150, 245, 190]
+	      Orientation	      "down"
+	      ForegroundColor	      "red"
+	      BackgroundColor	      "cyan"
+	      NamePlacement	      "alternate"
+	      Expr		      "0.07*exp(u/20)*(exp(0.1*(u+30.0))+1.0)/"
+"(1.0+0.07*exp(u/20.0)*(exp(0.1*(u+30))+1.0))"
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "t"
+	      Position		      [316, 150, 374, 190]
+	      Orientation	      "down"
+	      ForegroundColor	      "red"
+	      BackgroundColor	      "cyan"
+	      NamePlacement	      "alternate"
+	      Expr		      "(exp(0.1*(u+30.0))+1.0)/(1.0+0.07*exp(u"
+"/20.0)*(exp(0.1*(u+30.0))+1.0))"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "gate_h"
+	      Position		      [100, 383, 130, 397]
+	      Orientation	      "left"
+	      ForegroundColor	      "red"
+	      BackgroundColor	      "cyan"
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Line {
+	      SrcBlock		      "V_m"
+	      SrcPort		      1
+	      Points		      [0, 0; 85, 0]
+	      Branch {
+		Points			[130, 0]
+		DstBlock		"t"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"infinity_h"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "t"
+	      SrcPort		      1
+	      Points		      [0, 40]
+	      DstBlock		      "Product"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Sum"
+	      SrcPort		      1
+	      DstBlock		      "Product"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "infinity_h"
+	      SrcPort		      1
+	      DstBlock		      "Sum"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Product"
+	      SrcPort		      1
+	      Points		      [30, 0; 0, 145]
+	      DstBlock		      "h"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "h"
+	      SrcPort		      1
+	      Points		      [0, 0; -35, 0]
+	      Branch {
+		DstBlock		"Sum"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[-55, 0]
+		Branch {
+		  DstBlock		  "gate_h"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [0, 30]
+		  DstBlock		  "Variable h"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Annotation {
+	      Position		      [256, 20]
+	      Text		      "Gating Variable : h"
+	      DropShadow	      on
+	      FontSize		      18
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "gate_m"
+	  Ports			  [1, 1]
+	  Position		  [370, 145, 475, 205]
+	  Orientation		  "left"
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "cyan"
+	  ShowPortLabels	  on
+	  TreatAsAtomicUnit	  off
+	  RTWSystemCode		  "Auto"
+	  RTWFcnNameOpts	  "Auto"
+	  RTWFileNameOpts	  "Auto"
+	  System {
+	    Name		    "gate_m"
+	    Location		    [59, 89, 681, 561]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    AutoZoom		    on
+	    Block {
+	      BlockType		      Inport
+	      Name		      "V_m"
+	      Position		      [90, 43, 120, 57]
+	      ForegroundColor	      "red"
+	      BackgroundColor	      "cyan"
+	      Port		      "1"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Product"
+	      Ports		      [2, 1]
+	      Position		      [375, 221, 420, 254]
+	      ForegroundColor	      "red"
+	      BackgroundColor	      "cyan"
+	      Inputs		      "/*"
+	      Multiplication	      "Element-wise(.*)"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum"
+	      Ports		      [2, 1]
+	      Position		      [225, 235, 245, 255]
+	      ForegroundColor	      "red"
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	      IconShape		      "round"
+	      Inputs		      "|+-"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Scope
+	      Name		      "Variable m"
+	      Ports		      [1]
+	      Position		      [400, 404, 430, 436]
+	      ForegroundColor	      "red"
+	      BackgroundColor	      "cyan"
+	      Floating		      off
+	      Location		      [173, 615, 497, 854]
+	      Open		      off
+	      NumInputPorts	      "1"
+	      TickLabels	      "OneTimeTick"
+	      ZoomMode		      "on"
+	      List {
+		ListType		AxesTitles
+		axes1			"%<SignalLabel>"
+	      }
+	      Grid		      "on"
+	      TimeRange		      "auto"
+	      YMin		      "-5"
+	      YMax		      "5"
+	      SaveToWorkspace	      off
+	      SaveName		      "ScopeData1"
+	      DataFormat	      "StructureWithTime"
+	      LimitDataPoints	      on
+	      MaxDataPoints	      "5000"
+	      Decimation	      "1"
+	      SampleInput	      off
+	      SampleTime	      "0"
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "infinity_m"
+	      Position		      [180, 145, 240, 185]
+	      Orientation	      "down"
+	      ForegroundColor	      "red"
+	      BackgroundColor	      "cyan"
+	      NamePlacement	      "alternate"
+	      Expr		      "0.1*(u+25.0)/(0.1*(u+25.0)+4.0*(exp(u/1"
+"8))*(exp(0.1*(u+25.0))-1.0))"
+	    }
+	    Block {
+	      BlockType		      Integrator
+	      Name		      "m"
+	      Ports		      [1, 1]
+	      Position		      [275, 370, 305, 400]
+	      Orientation	      "left"
+	      ForegroundColor	      "red"
+	      BackgroundColor	      "cyan"
+	      ExternalReset	      "none"
+	      InitialConditionSource  "internal"
+	      InitialCondition	      "0"
+	      LimitOutput	      off
+	      UpperSaturationLimit    "inf"
+	      LowerSaturationLimit    "-inf"
+	      ShowSaturationPort      off
+	      ShowStatePort	      off
+	      AbsoluteTolerance	      "auto"
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "t"
+	      Position		      [311, 145, 369, 185]
+	      Orientation	      "down"
+	      ForegroundColor	      "red"
+	      BackgroundColor	      "cyan"
+	      NamePlacement	      "alternate"
+	      Expr		      "(exp(0.1*(u+25.0))-1.0)/(0.1*(u+25.0)+4"
+".0*exp(u/18.0)*(exp(0.1*(u+25.0))-1.0))"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "gate_m"
+	      Position		      [95, 378, 125, 392]
+	      Orientation	      "left"
+	      ForegroundColor	      "red"
+	      BackgroundColor	      "cyan"
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Line {
+	      SrcBlock		      "V_m"
+	      SrcPort		      1
+	      Points		      [85, 0]
+	      Branch {
+		Points			[130, 0]
+		DstBlock		"t"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"infinity_m"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "t"
+	      SrcPort		      1
+	      Points		      [0, 40]
+	      DstBlock		      "Product"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Sum"
+	      SrcPort		      1
+	      DstBlock		      "Product"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "infinity_m"
+	      SrcPort		      1
+	      DstBlock		      "Sum"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Product"
+	      SrcPort		      1
+	      Points		      [30, 0; 0, 145]
+	      DstBlock		      "m"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "m"
+	      SrcPort		      1
+	      Points		      [-35, 0]
+	      Branch {
+		DstBlock		"Sum"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[-40, 0]
+		Branch {
+		  DstBlock		  "gate_m"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [0, 35]
+		  DstBlock		  "Variable m"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Annotation {
+	      Position		      [281, 21]
+	      Text		      "Gating Variable : m "
+	      DropShadow	      on
+	      FontSize		      18
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "i_Na"
+	  Position		  [45, 208, 75, 222]
+	  Orientation		  "left"
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "cyan"
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "g_Na"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "gate_m"
+	  SrcPort		  1
+	  Points		  [-10, 0]
+	  Branch {
+	    Points		    [0, -20]
+	    DstBlock		    "cube"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 20]
+	    DstBlock		    "cube"
+	    DstPort		    3
+	  }
+	  Branch {
+	    DstBlock		    "cube"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "cube"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "V_m"
+	  SrcPort		  1
+	  Points		  [-40, 0]
+	  Branch {
+	    Points		    [0, -80]
+	    DstBlock		    "gate_m"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "gate_h"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 80]
+	    DstBlock		    "Sum"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "gate_h"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "E_Na"
+	  SrcPort		  1
+	  Points		  [-25, 0; 0, -40]
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  DstBlock		  "i_Na"
+	  DstPort		  1
+	}
+	Annotation {
+	  Position		  [338, 22]
+	  Text			  "Current by Sodium ions"
+	  DropShadow		  on
+	  FontSize		  18
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "Sum"
+      SrcPort		      1
+      DstBlock		      "V_m"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "i_Na"
+      SrcPort		      1
+      Points		      [-65, 0; 0, -145; 590, 0; 0, 165]
+      DstBlock		      "Sum"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "i_K"
+      SrcPort		      1
+      Points		      [-40, 0; 0, -255; 585, 0; 0, 215]
+      DstBlock		      "Sum"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "i_L"
+      SrcPort		      1
+      Points		      [-20, 0; 0, -375; 590, 0; 0, 265]
+      DstBlock		      "Sum"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Pulse\nGenerator"
+      SrcPort		      1
+      DstBlock		      "Sum"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "V_m"
+      SrcPort		      1
+      Points		      [0, 0; -50, 0]
+      Branch {
+	Points			[-25, 0]
+	Branch {
+	  DstBlock		  "i_K"
+	  DstPort		  1
+	}
+	Branch {
+	  Points		  [0, -135]
+	  DstBlock		  "i_Na"
+	  DstPort		  1
+	}
+	Branch {
+	  Points		  [0, 145]
+	  DstBlock		  "i_L"
+	  DstPort		  1
+	}
+      }
+      Branch {
+	Points			[0, 240]
+	DstBlock		"Action Potential"
+	DstPort			1
+      }
+    }
+    Annotation {
+      Position		      [408, 41]
+      VerticalAlignment	      "top"
+      Text		      "Hodgkin Hoxley Model"
+      DropShadow	      on
+      FontName		      "times"
+      FontSize		      24
+    }
+  }
+}
